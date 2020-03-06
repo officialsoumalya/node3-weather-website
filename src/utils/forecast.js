@@ -14,7 +14,7 @@ const forecast=(latitude,longitude,callback)=>{
     else{
         const temp=body.currently.temperature
         const precep=body.currently.precipProbability
-        callback(undefined,body.daily.data[0].summary+' It is currently '+temp+' degrees out.There is '+precep+'% chance of rain')
+        callback(undefined,body.daily.data[0].summary+' It is currently '+temp+' degrees out.The highest temperature today is '+body.daily.data[0].temperatureHigh +' with a low of '+body.daily.data[0].temperatureLow + '. There is '+precep+'% chance of rain')
     }
 })
 }
